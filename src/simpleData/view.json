@@ -1,0 +1,49 @@
+{
+  "styleConfig": {
+    "row": { "1": { "width": 120 }, "3": { "width": 120 } },
+    "column": { "1": { "width": 120 }, "7": { "width": 120 } },
+    "version": "v2.14.0",
+    "common": { "combineStatus": "combine", "transposed": false }
+  },
+  "x": [
+    {
+      "indexNo": 3,
+      "no": 8,
+      "children": [
+        {
+          "indexNo": 10,
+          "no": 7,
+          "fun": { "name": "" },
+          "sorts": [],
+          "children": [{ "indexNo": 1, "no": 6, "children": [], "colType": "text", "colName": "注册门店" }],
+          "colType": "text",
+          "colName": "注册城市"
+        }
+      ],
+      "colType": "text",
+      "colName": "注册省份"
+    },
+    {
+      "indexNo": 11,
+      "no": 19,
+      "children": [{ "indexNo": 15, "no": 12, "children": [], "colType": "text", "colName": "会员级别" }],
+      "colType": "text",
+      "colName": "消费类别"
+    },
+    { "indexNo": 4, "no": 33, "children": [], "colType": "text", "colName": "总计" }
+  ],
+  "y": [
+    {
+      "indexNo": 12,
+      "no": 20,
+      "children": [
+        { "indexNo": 6, "no": 4, "children": [], "colType": "number", "colName": "会员年龄" },
+        { "indexNo": 13, "no": 13, "children": [], "colType": "number", "colName": "会员积分" },
+        { "indexNo": 9, "no": 18, "children": [], "colType": "number", "colName": "消费金额" }
+      ],
+      "colType": "text",
+      "colName": "消费品牌"
+    },
+    { "indexNo": 8, "no": 14, "children": [], "colType": "number", "colName": "会员返利" }
+  ]
+}

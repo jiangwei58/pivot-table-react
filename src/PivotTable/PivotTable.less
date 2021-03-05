@@ -1,0 +1,149 @@
+@primaryColor: #03b485;
+
+.pivot-table {
+  position: relative;
+  display: flex;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .pivot-left-panel {
+    background-color: #fff;
+    &.pivot-left-panel-absolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+
+  .pivot-left-content {
+    overflow: hidden;
+  }
+
+  .pivot-left-header,
+  .pivot-right-header {
+    position: relative;
+    z-index: 1;
+    transition: box-shadow 0.3s;
+  }
+
+  .pivot-left-header-collection {
+    overflow: hidden !important;
+  }
+
+  .pivot-left-content-collection {
+    margin-right: -18px;
+    padding-right: 1px;
+  }
+
+  // .pivot-right-header-collection {}
+
+  // .pivot-right-content-grid {}
+
+  .pivot-table-cell {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 4px;
+    border: 1px solid #ccc;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pivot-cell-value {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .pivot-cell-jump {
+    color: #2196f3;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .pivot-cell-sort {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 12px;
+    color: #bfbfbf;
+    cursor: pointer;
+    .anticon:last-child {
+      margin-top: -4px;
+    }
+  }
+  .pivot-cell-toggle {
+    cursor: pointer;
+    &:hover {
+      color: @primaryColor;
+    }
+  }
+
+  .pivot-shadow-right {
+    box-shadow: 6px 0px 6px -4px rgba(0, 0, 0, 0.15);
+  }
+  .pivot-shadow-bottom {
+    box-shadow: 0px 6px 6px -4px rgba(0, 0, 0, 0.15);
+  }
+
+  .ReactVirtualized__Collection,
+  .ReactVirtualized__Grid {
+    outline: 0;
+  }
+
+  .pivot-border-top,
+  .pivot-border-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  .pivot-border-top {
+    width: 100%;
+    height: 2px;
+    border-top: 1px solid #ccc;
+  }
+  .pivot-border-left {
+    width: 2px;
+    height: 100%;
+    border-left: 1px solid #ccc;
+  }
+
+  .triangle-up, .triangle-down {
+    width: 0;
+    height: 0;
+  }
+  .triangle-up {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #bfbfbf;
+    &.sort-active {
+      border-bottom-color: @primaryColor;
+    }
+  }
+  .triangle-down {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #bfbfbf;
+    margin-top: 2px;
+    &.sort-active {
+      border-top-color: @primaryColor;
+    }
+  }
+}
